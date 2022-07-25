@@ -9,7 +9,12 @@ public class ByteBankApp {
 
         account.setBalance(200);
 
-        System.out.println(account.getBalance());
+        BankAccount account2 = new BankAccount();
+
+        account2.setBalance(300);
+
+        System.out.println("First account contains " + account.getBalance());
+        System.out.println("Second account contains " + account.getBalance());
     }
 
 }
