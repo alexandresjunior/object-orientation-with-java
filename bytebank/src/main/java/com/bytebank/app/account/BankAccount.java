@@ -7,6 +7,10 @@ public class BankAccount {
     private int number;
     private String owner;
 
+    public BankAccount() {
+        this.branch = 42;
+    }
+
     public double getBalance() {
         return balance;
     }

@@ -8,3 +8,4 @@
 * **Classes** are specifications of a type, which define characteristics (**attributes** or **properties**) and behaviors (**methods**). 
 * For the [Byte Bank app](./bytebank/) example, a bank account may be defined by the [BankAccount](./bytebank/src/main/java/com/bytebank/app/account/BankAccount.java) class, which contains among others the `balance` attribute.
 * **Objects** are instances of classes where we can set values for their attributes. To create an instance we need to use the keyword `new`, as it has been done [here](./bytebank/src/main/java/com/bytebank/app/ByteBankApp.java).
+* Default values for the attributes may be defined within the **constructor** method.

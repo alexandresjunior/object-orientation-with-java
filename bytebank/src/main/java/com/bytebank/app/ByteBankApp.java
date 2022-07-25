@@ -15,6 +15,9 @@ public class ByteBankApp {
 
         System.out.println("First account contains " + account.getBalance());
         System.out.println("Second account contains " + account.getBalance());
+        
+        System.out.println(account.getBranch());
+        System.out.println(account.getNumber());
     }
 
 }
