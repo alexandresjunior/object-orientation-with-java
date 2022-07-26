@@ -29,3 +29,11 @@
 * Encapsulation provides access control to the attributes and methods of a class. It is an efficient way to protect the data manipulated within the class, in addition to determining where this class can be manipulated.
 * For this purpose, we must always provide `private` attributes and `public` **accessor** methods (*getters*), and if the class is mutable, we must also provide the **modifier** methods (*setters*).
 * The advantage of using `private` attributes is that the internal implementation can be modified without affecting any code outside the class itself.
+
+## Constructors and Static Members
+* **Constructors** are methods used to **initialize attributes**. It is possible to have multiple constructors (as long as they vary in **type** or **number of parameters**).
+* Depending on the number of constructors defined, initialization of attributes received in the constructor becomes **mandatory**.
+* **Static** methods are functions that do not depend on any instance variables and can be called directly from the class.
+* Like static attributes, static methods have a **relationship with a class as a whole**, while attributes and methods that are not static are associated with a specific class instance (object).
+* That's why it's not possible to reference `this` inside static methods.
+* In our [Bank Account](./bytebank/src/main/java/com/bytebank/app/account/BankAccount.java) class example, we can increment the number of accounts created by using the static attribute `total` and get its value by the static method `getNumberOfAccounts()`.

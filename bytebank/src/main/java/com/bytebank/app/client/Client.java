@@ -6,6 +6,17 @@ public class Client {
     private String ssn;
     private String occupation;
 
+    public Client() {
+        /** If this constructor is not defined, initialization of attributes 
+        received in the constructor becomes mandatory.*/ 
+    }
+
+    public Client(String name, String ssn, String occupation) {
+        this.name = name;
+        this.ssn = ssn;
+        this.occupation = occupation;
+    }
+
     public String getName() {
         return name;
     }

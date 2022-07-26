@@ -49,6 +49,14 @@ public class ByteBankApp {
         account.setOwner(client); // Comment this line to get a NullPointerException (NPE)
 
         System.out.println(account.getOwner().getName());
+
+        BankAccount account4 = new BankAccount(123, 45678);
+
+        System.out.println(account4.getBranch());
+        System.out.println(account4.getNumber());
+
+        System.out.println(BankAccount.getNumberOfAccounts()); 
+        // Note that although we created 4 accounts, it's returning only 3!
     }
 
 }
