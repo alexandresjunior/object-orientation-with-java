@@ -1,11 +1,13 @@
 package com.bytebank.app.account;
 
+import com.bytebank.app.client.Client;
+
 public class BankAccount {
     
     private double balance;
     private int branch;
     private int number;
-    private String owner;
+    private Client owner;
 
     public BankAccount() {
         this.branch = 42;
@@ -35,11 +37,11 @@ public class BankAccount {
         this.number = number;
     }
 
-    public String getOwner() {
+    public Client getOwner() {
         return owner;
     }
 
-    public void setOwner(String owner) {
+    public void setOwner(Client owner) {
         this.owner = owner;
     }
 

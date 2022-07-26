@@ -16,3 +16,8 @@
 * By convention, the method name in the Java world must start with a lowercase letter and then use **CamelCase**.
 * It is expected for our [BankAccount](./bytebank/src/main/java/com/bytebank/app/account/BankAccount.java) class example to be able to **deposit**, **withdraw** and **transfer** an ammount of money. For those actions, we may define `deposit()`, `withdraw()` and `transfer()` methods.
 * The keyword `this` is a reference, i.e., it "points" to an object/instance. Its use is **optional**, although it is recommended that it be used to reference attributes of the **current object** - the object whose method or constructor is being called.
+
+## Object Composition
+* It is possible to define a **relationship between classes** through object composition, which is advantageous as the size of the class increases and it starts to contain information unrelated to its purpose.
+* For this reason, the [Client](./bytebank/src/main/java/com/bytebank/app/client/Client.java) class was created and set as an attribute of the `BankAccount` class to gather data as client's `name`, social security number (`ssn`) and `ocupation`.
+* It is important to make sure that the `Client` attribute be **instantiated** before being called. Otherwise, a `NullPointerException` will be thrown.

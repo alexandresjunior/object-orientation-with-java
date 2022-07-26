@@ -1,6 +1,7 @@
 package com.bytebank.app;
 
 import com.bytebank.app.account.BankAccount;
+import com.bytebank.app.client.Client;
 
 public class ByteBankApp {
     
@@ -40,6 +41,14 @@ public class ByteBankApp {
 
         System.out.println("First account contains " + account.getBalance());
         System.out.println("Second account contains " + account2.getBalance());
+
+        Client client = new Client();
+
+        client.setName("Alexandre de Souza Jr.");
+
+        account.setOwner(client); // Comment this line to get a NullPointerException (NPE)
+
+        System.out.println(account.getOwner().getName());
     }
 
 }
