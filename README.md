@@ -21,3 +21,11 @@
 * It is possible to define a **relationship between classes** through object composition, which is advantageous as the size of the class increases and it starts to contain information unrelated to its purpose.
 * For this reason, the [Client](./bytebank/src/main/java/com/bytebank/app/client/Client.java) class was created and set as an attribute of the `BankAccount` class to gather data as client's `name`, social security number (`ssn`) and `ocupation`.
 * It is important to make sure that the `Client` attribute be **instantiated** before being called. Otherwise, a `NullPointerException` will be thrown.
+
+
+## Encapsulation and Visibility
+* In object-oriented programming, **access modifiers** are the set of keywords that define an attribute, method, or class as `public`, `private`, or `protected`.
+* When we have a `public` class with its attributes and methods being directly accessed, we say that it doesn't offer the benefits of **encapsulation**.
+* Encapsulation provides access control to the attributes and methods of a class. It is an efficient way to protect the data manipulated within the class, in addition to determining where this class can be manipulated.
+* For this purpose, we must always provide `private` attributes and `public` **accessor** methods (*getters*), and if the class is mutable, we must also provide the **modifier** methods (*setters*).
+* The advantage of using `private` attributes is that the internal implementation can be modified without affecting any code outside the class itself.
