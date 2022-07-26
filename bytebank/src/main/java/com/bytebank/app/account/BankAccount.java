@@ -43,4 +43,28 @@ public class BankAccount {
         this.owner = owner;
     }
 
+    public void deposit(double amount) {
+        this.balance += amount;
+    }
+
+    public boolean withdraw(double amount) {
+        if (this.balance >= amount) {
+            this.balance -= amount;
+
+            return true;
+        }
+
+        return false;        
+    }
+
+    public boolean transfer(double amount, BankAccount destinationAccount) {
+        if (withdraw(amount)) {
+            destinationAccount.deposit(amount);
+        
+            return true;
+        }
+
+        return false;
+    }
+
 }

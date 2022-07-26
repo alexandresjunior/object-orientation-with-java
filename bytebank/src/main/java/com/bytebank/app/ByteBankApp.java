@@ -32,6 +32,14 @@ public class ByteBankApp {
             System.out.println("Second account: " + account2);
             System.out.println("Third account: " + account3);
         }
+
+        account.deposit(100);
+        account.transfer(100, account2);
+        
+        account2.withdraw(100);
+
+        System.out.println("First account contains " + account.getBalance());
+        System.out.println("Second account contains " + account2.getBalance());
     }
 
 }
